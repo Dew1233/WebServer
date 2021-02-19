@@ -43,6 +43,9 @@ public class ClientHandler implements Runnable{
           out.write(13);
           out.write(10);
 
+          out.write(13);
+          out.write(10);
+
           //3:发送响应正文(文件内容)
           //创建文件输入流读取要发送的文件数据
           FileInputStream fis = new FileInputStream(file);
