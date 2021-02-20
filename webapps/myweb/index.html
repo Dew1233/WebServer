@@ -13,12 +13,24 @@
 文本框：<input type= "text">
 
 <br>标签换行
+<img src = "图片路径" width = "" height = "">标签用来显示一张图片
+ 其中src用来指定图片的路径，可以指定绝对路径或者相对路径
+ 需要注意，在页面上无论哪个标签只要是指定相对路径，那么”./"当前目录指的就是当前页面所在的目录
+ 例如：
+ <img src = "logo.gif">
+ 浏览器如何理解上面的"./logo.png"的实际路径是什么，取决于浏览器地址栏上请求当前页面所在目录
+ 请求当前页面时候，浏览器的路径为：http://localhost:8088/myweb/index.html
+ 那么浏览器在这个页面中看到的所有相对路径中的"./"对应的位置都是：
+ http://localhost:8088/myweb/
+ 因此,上面的图片实际路径为：
+ http://localhost:8088/myweb/logo.png
 -->
 <center>
     <h1>百度</h1>
     <input type="text">
     <input type="button" value="百度一下" onclick="alert('警告')"><br>
     <a href="https://www.taobao.com/" style="text-decoration: none">去淘宝</a>
+    <img src="logo.gif">
 </center>
 
 <center>

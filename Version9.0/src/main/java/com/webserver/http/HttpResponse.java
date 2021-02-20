@@ -106,6 +106,7 @@ public class HttpResponse {
         this.entity = entity;
    }
 
+
     public int getStatusCode() {
         return statusCode;
     }

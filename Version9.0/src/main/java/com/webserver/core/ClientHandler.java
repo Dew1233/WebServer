@@ -1,5 +1,6 @@
 package com.webserver.core;
 
+import com.webserver.http.EmptyRequestException;
 import com.webserver.http.HttpRequest;
 import com.webserver.http.HttpResponse;
 
@@ -46,7 +47,10 @@ public class ClientHandler implements Runnable{
           //3:发送响应正文
           response.flush();
           System.out.println("响应发送完毕");
-      } catch (Exception e) {
+      }catch (EmptyRequestException e){
+          //什么都不用做，上面抛出该异常就是为了忽略处理和响应操作
+      }
+      catch (Exception e) {
           e.printStackTrace();
       }finally {
           try {

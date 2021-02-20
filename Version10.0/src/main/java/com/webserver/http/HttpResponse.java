@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 响应对象，当前类的每一个实例用于表示给客户端发送一个Http响应
@@ -18,6 +20,7 @@ public class HttpResponse {
     private String statusReason = "OK";
 
     //响应头相关信息
+    private Map<String,String> headers = new HashMap<>();
 
     //响应正文相关信息
     private File entity;//响应正文对应的实体文件
@@ -54,13 +57,16 @@ public class HttpResponse {
        System.out.println("HttpResponse:开始发送响应头……");
        try {
            //2:发送响应头
-           String line = "Content-Type:text/html";
-           System.out.println("输出响应头:"+line);
-           println(line);
-
-           line = "Content-Length:"+entity.length();
-           println(line);
-
+          //遍历map
+           headers.forEach((k,v)->{
+               String line = k +": "+v;
+               System.out.println("响应头："+line);
+               try {
+                   println(line);
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+           });
            //单独发送CRLF   不加上会出现空白问题
            println("");
        }catch (IOException e){
@@ -98,8 +104,16 @@ public class HttpResponse {
        out.write(13);
        out.write(10);
    }
+    /**
+     * 添加响应头
+     * @param name
+     * @param value
+     */
+    public void putHeader(String name,String value){
+        headers.put(name, value);
+    }
 
-   public File getEntity(){
+    public File getEntity(){
         return entity;
    }
    public void setEntity(File entity){
@@ -122,3 +136,4 @@ public class HttpResponse {
         this.statusReason = statusReason;
     }
 }
+
