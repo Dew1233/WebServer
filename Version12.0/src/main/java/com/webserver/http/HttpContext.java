@@ -60,4 +60,6 @@ public class HttpContext {
     public static String getMimeType(String ext){
         return mimeMapping.get(ext);
     }
+
+
 }
