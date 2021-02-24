@@ -9,4 +9,4 @@
 将根标签下<mime-mapping>获取到，并将其中的子标签：
      <extension>中间的文本作为key
      <mime-type>中间的文本作为value
-     存入mimeMapping这个Map完成初始化，初始化后mimeMapping应该有1011个元素
+     存入mimeMapping这个Map完成初始 化，初始化后mimeMapping应该有1011个元素

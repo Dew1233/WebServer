@@ -6,18 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Version5.0" />
-        <module name="Version3.0" />
-        <module name="Version1.0" />
-        <module name="Version12.0" />
         <module name="Version10.0" />
-        <module name="Version8.0" />
-        <module name="Version6.0" />
-        <module name="Version4.0" />
-        <module name="Version2.0" />
         <module name="Version11.0" />
-        <module name="Version9.0" />
+        <module name="Version12.0" />
+        <module name="Version13.0" />
+        <module name="Version14.0" />
+        <module name="Version15.0" />
+        <module name="Version16.0" />
+        <module name="Version1.0" />
+        <module name="Version2.0" />
+        <module name="Version3.0" />
+        <module name="Version4.0" />
+        <module name="Version5.0" />
+        <module name="Version6.0" />
         <module name="Version7.0" />
+        <module name="Version8.0" />
+        <module name="Version9.0" />
       </profile>
     </annotationProcessing>
   </component>
