@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Version20.0" />
         <module name="Version10.0" />
         <module name="Version11.0" />
         <module name="Version12.0" />
@@ -13,6 +14,9 @@
         <module name="Version14.0" />
         <module name="Version15.0" />
         <module name="Version16.0" />
+        <module name="Version17.0" />
+        <module name="Version18.0" />
+        <module name="Version19.0" />
         <module name="Version1.0" />
         <module name="Version2.0" />
         <module name="Version3.0" />
